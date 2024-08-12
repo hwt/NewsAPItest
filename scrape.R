@@ -10,4 +10,4 @@ req <- request("https://newsapi.org/v2/everything") |>
 resp <- req_perform(req)
 str(resp_body_json(resp))
 
-jsonlite::write_json(resp,path="data/year-month-day.json")
+jsonlite::write_json(resp_body_json(resp),path="data/year-month-day.json")
